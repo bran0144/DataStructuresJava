@@ -1,3 +1,5 @@
+package dataStructures;
+
 public class BasicStack <X> {
     private X[] data;
     private int pointer;
