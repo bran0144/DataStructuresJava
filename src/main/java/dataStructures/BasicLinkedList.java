@@ -62,6 +62,48 @@ public class BasicLinkedList <X> {
             return nodeItem;
         }
     }
+    public X get(int position) {
+        if(first == null) {
+            throw new IllegalStateException("Linked list is empty");
+        }
+        Node currentNode = first;
+        for(int i = 1; i< size() && currentNode !=null; i++) {
+            if( i == position) {
+                return currentNode.getNodeItem();
+            }
+            else {
+                currentNode = currentNode.getNextNode();
+            }
+        }
+        return null;
+    }
+    public int find(X item) {
+        if(first == null) {
+            throw new IllegalStateException("Linked list is empty");
+        }
+        Node currentNode = first;
+        for(int i = 1; i < size() && currentNode != null; i ++) {
+            if(currentNode.getNodeItem().equals(item)) {
+                return i;
+            }
+            else{
+                currentNode = currentNode.getNextNode();
+            }
+        }
+        return -1;
+    }
+    public String toString() {
+        StringBuffer contents = new StringBuffer();
+        Node curNode = first;
+        while(curNode != null) {
+            contents.append(curNode.getNodeItem());
+            curNode = curNode.getNextNode();
+            if(curNode != null) {
+                contents.append(", ");
+            }
+        }
+        return contents.toString();
+    }
     public int size() {
         return nodeCount;
     }
