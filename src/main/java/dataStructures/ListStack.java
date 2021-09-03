@@ -12,20 +12,21 @@ public class ListStack <X> {
     }
 
     public void push(X newItem) {
-        data[pointer++] = newItem;
+        data.add(newItem);
+        pointer++;
     }
 
     public X pop() {
         if (pointer == 0) {
             throw new IllegalStateException("no more items in stack");
         }
-        return data[--pointer];
+        return (X) data.get(pointer);
     }
 
     public boolean contains(X item) {
         boolean found = false;
         for (int i = 0; i < pointer; i++) {
-            if (data[i].equals(item)) {
+            if (data.get(i).equals(item)) {
                 found = true;
                 break;
             }
