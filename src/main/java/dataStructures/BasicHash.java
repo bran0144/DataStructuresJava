@@ -108,3 +108,6 @@ public class BasicHash <X, Y> {
 //hashCode() method lets you make a unique hashCode
 //
 
+//TODO:How to reduce hash collisions? (increase Hash capacity or improve HashCode() method quality
+
+
