@@ -20,11 +20,50 @@ public class BasicHash <X, Y> {
             return (Y)data[hash].getValue();
         }
     }
-
     public void put(X key, Y value) {
         int hash = calculateHash(key);
         data[hash] = new HashEntry<X, Y>(key, value);
         size++;
+    }
+    public Y delete(X key) {
+        Y value = get(key);
+        if (value != null) {
+            int hash = calculateHash(key);
+            data[hash] = null;
+            size--;
+            hash = (hash + 1) % this.capacity;
+
+            while (data[hash] != null) {
+                HashEntry he = data[hash];
+                data[hash] = null;
+                put((X)he.getKey(), (Y)he.getValue());
+                size--;
+                hash = (hash + 1) % this.capacity;
+            }
+        }
+        return value;
+    }
+
+    public boolean hasKey(X key) {
+        int hash = calculateHash(key);
+        if(data[hash] == null) {
+            return false;
+        }
+        else {
+            if(data[hash].getKey().equals(key)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean hasValue(Y value) {
+        for(int i = 0; i < this.capacity; i++){
+            HashEntry entry = data[i];
+            if(entry != null && entry.getValue().equals(value)){
+                return true;
+            }
+        }
+        return false;
     }
     public int size() {
         return this.size;
