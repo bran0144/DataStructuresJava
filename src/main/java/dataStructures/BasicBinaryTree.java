@@ -2,10 +2,49 @@ package dataStructures;
 
 public class BasicBinaryTree <X extends Comparable<X>>{
     private Node root;
+    private int size;
+
+
     public BasicBinaryTree() {
         this.root = null;
     }
 
+    public int size() {
+        return size;
+    }
+    public void add(X item) {
+        Node node = new Node(item);
+        if(root == null) {
+            this.root = node;
+            this.size++;
+        }
+        else{
+            insert(this.root, node);
+        }
+    }
+    private void insert(Node parent, Node child) {
+        if(child.getItem().compareTo(parent.getItem()) < 0) {
+            if(parent.getLeft() == null) {
+                parent.setLeft(child);
+                child.setParent(parent);
+                this.size++;
+            }
+            else {
+                insert(parent.getLeft(), child);
+            }
+        }
+        else if (child.getItem().compareTo(parent.getItem()) > 0) {
+            if(parent.getRight() == null) {
+                parent.setRight(child);
+                child.setParent(parent);
+                this.size++;
+            }
+            else{
+                insert(parent.getRight(), child);
+            }
+        }
+        //if parent and child are equal, we will not insert, data must be unique
+    }
     private class Node {
         private Node left;
         private Node right;
