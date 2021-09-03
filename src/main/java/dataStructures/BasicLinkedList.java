@@ -137,3 +137,8 @@ public class BasicLinkedList <X> {
 // removeAT O(n)
 // find O(n)
 // get O(n)
+
+//TODO: Create a timer for linked list
+//TODO: Use ArrayList instead of linkedlist and compare times
+//TODO: find = indexOf
+

@@ -6,6 +6,7 @@ public class TrainLinkedListApp {
     BasicLinkedList<TrainCar> train = new BasicLinkedList<TrainCar>();
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         TrainLinkedListApp app = new TrainLinkedListApp();
         app.buildInitialTrain();
 
@@ -29,6 +30,10 @@ public class TrainLinkedListApp {
 
         //print out the train size
         System.out.println("After Last Stop train size: " + app.trainSize());
+
+        long end = System.currentTimeMillis();
+        System.out.println("Time:"  + (end-start));
+
     }
 
     private int trainSize() {
