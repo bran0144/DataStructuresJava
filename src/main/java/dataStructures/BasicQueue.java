@@ -91,3 +91,7 @@ public class BasicQueue<X> {
 //deQueue O(1)
 //Search O(n)
 //Access O(n)
+
+//TODO: Create Queue Interface & implement
+//TODO: Try using an ArrayList instead of array (ListQueue)
+//TODO: Change Snowbird app code to use interface and ListQueue
