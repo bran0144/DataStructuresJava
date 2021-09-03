@@ -12,7 +12,7 @@ public class BasicQueue<X> {
     public BasicQueue(int size) {
         this.front = -1;
         this.end = -1;
-        data = (X[]) new Object[size];
+        data = (X[])new Object[size];
     }
 
     public int size() {
