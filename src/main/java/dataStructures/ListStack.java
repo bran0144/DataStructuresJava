@@ -1,11 +1,13 @@
+
 package dataStructures;
 
-public class BasicStack <X> {
-    private X[] data;
+import java.util.ArrayList;
+
+public class ListStack <X> {
+    ArrayList data = new ArrayList();
     private int pointer;
 
-    public BasicStack() {
-        data = (X[]) new Object[1000];
+    public ListStack() {
         pointer = 0;
     }
 
