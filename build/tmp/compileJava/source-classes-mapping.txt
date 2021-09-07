@@ -4,15 +4,26 @@ dataStructures/BasicStack.java
  dataStructures.BasicStack
 apps/CardStackApp.java
  apps.CardStackApp
+apps/SnowbirdLiftApp.java
+ apps.SnowbirdLiftApp
+ apps.SnowbirdLiftApp$Gad2Chair
+dataStructures/BasicQueue.java
+ dataStructures.BasicQueue
+dataStructures/BasicHash.java
+ dataStructures.BasicHash
+ dataStructures.BasicHash$HashEntry
 apps/TrainLinkedListApp.java
  apps.TrainLinkedListApp
  apps.TrainLinkedListApp$CarType
  apps.TrainLinkedListApp$TrainCar
-dataStructures/BasicQueue.java
- dataStructures.BasicQueue
-apps/SnowbirdLiftApp.java
- apps.SnowbirdLiftApp
- apps.SnowbirdLiftApp$Gad2Chair
+dataStructures/BasicBinaryTree.java
+ dataStructures.BasicBinaryTree
+ dataStructures.BasicBinaryTree$Node
+apps/MotorCycleOilChangeApp.java
+ apps.MotorCycleOilChangeApp
+apps/ContactManagerApp.java
+ apps.ContactManagerApp
+ apps.ContactManagerApp$Contact
 dataStructures/BasicLinkedList.java
  dataStructures.BasicLinkedList
  dataStructures.BasicLinkedList$Node
